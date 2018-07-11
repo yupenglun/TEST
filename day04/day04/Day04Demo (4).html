@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body{/* 给body设置字体 body内部元素会继承此样式  */
+		font: 12px "simhei", Arial, Helvetica, sans-serif;
+		color: #666;
+	}
+	#big{
+		width: 1000px;
+		height: 376px;
+		background-color: yellow;
+		margin: 0 auto;
+	}
+	#leftsmall{
+		width: 611px;
+		height: 376px;
+		background-color: #E8E8E8;
+		background-image: url("../images/itemCat/study_computer_img1.png");
+		background-repeat: no-repeat;
+		background-size: 318px 319px;
+		background-position: 90% 90%;
+		overflow: hidden;/* 解决上边缘重叠的粘连问题  */
+		float: left;
+	}
+	#rightsmall{
+		float:right;
+		width: 375px;
+		height: 376px;
+		background-color: #E8E8E8;
+		background-image: url("../images/itemCat/study_computer_img2.png");
+		background-repeat: no-repeat;
+		background-size: 292px 232px;
+		background-position: 70% 88%;
+		overflow: hidden;/* 解决上边缘重叠的粘连问题  */
+		
+	}
+	#rightcontent{
+		margin: 39px 0 0 25px;
+	}
+	#leftcontent{
+		width: 255px;
+		height: 242px;
+ 		margin-top: 68px;
+		margin-left: 36px;
+		
+	}
+	.p1{
+		color: #333;
+		font-size: 32px;
+		margin-bottom: 12px;
+	}
+	.p2{
+		font-size: 12px;
+		margin-bottom: 24px;
+	}
+	.p3{
+		font-size: 24px;
+		color: #0AA1ED;
+		font-weight: bold;
+		margin-bottom: 12px;
+	}
+	input{
+		width: 132px;
+		height: 40px;
+		background-color: #0aa1ed;
+		color: white;
+		font-size: 20px;
+		border-radius:5px;
+		border: 0;
+	}
+</style>
+</head>
+<body>
+<div id="big">
+	<div id="leftsmall">
+		<div id="leftcontent">
+			<p class="p1">灵越 燃7000系列</p>
+			<p class="p2">酷睿双核i5处理器|256GB SSD| 8GB内存 <br>
+英特尔HD显卡620含共享显卡内存</p>
+			<p class="p3">￥4999.00</p>
+			<input type="button" value="查看详情">
+		</div>
+	</div>
+	<div id="rightsmall">
+		<div id="rightcontent">
+			<p class="p1">颜值 框不住</p>
+			<p class="p2">酷睿双核i5处理器|256GB SSD| 8GB内存 <br>
+英特尔HD显卡620含共享显卡内存</p>
+			<p class="p3">￥6888.00</p>
+			<input type="button" value="查看详情">
+		</div>
+	
+	</div>
+</div>
+
+</body>
+</html>
+
+

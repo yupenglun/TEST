@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>表单练习</title>
+</head>
+<body>
+	<h2>表单练习</h2>
+	<!-- action:提交地址 -->
+ 	<form action="">
+ 		用户名：<input type="text" name="username" 
+ 		placeholder="说点儿什么。。。" value="abc" 
+ 		maxlength="5" readonly="readonly" ><br>
+ 		密码:<input type="password"><br>
+ 		性别:<input type="radio" name="gender" value="男">男
+ 		<input type="radio" name="gender" value="女" id="nv"><label for="nv">女</label><br>
+ 		兴趣爱好：<input type="checkbox" name="hobby" value="lq">打篮球
+ 		<input type="checkbox" name="hobby" value="wz">王者农药
+ 		<input type="checkbox" name="hobby" value="py">找异性做朋友
+ 		<input type="checkbox" name="hobby"
+ 		 value="sing" id="cg"><label for="cg">唱歌</label><br>
+ 		靓照:<input type="file" name="pic"><br>
+ 		生日:<input type="date" name="birthday"><br>
+ 		<!-- 隐藏域 用户看不见 -->
+ 		<input type="hidden" name="id" value="3424">
+ 		个人简介：<textarea rows="3" cols="20" 
+ 		name="intro">这家伙很懒。。。。</textarea><br>
+ 		所在城市:<select name="city">
+ 			<option>请选择</option>
+ 			<option value="bj">北京</option>
+ 			<option value="sh">上海</option>
+ 			<option value="gz">广州</option>
+ 		</select><br>
+ 	 
+ 		<input type="submit" value="注册">
+ 		<input type="reset">
+ 		<input type="button" value="自定义按钮">
+ 	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
