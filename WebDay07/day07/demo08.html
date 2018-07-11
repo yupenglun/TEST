@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	 .small{
+	 	margin:2px;
+	 	width: 30px;
+	 	height: 30px;
+	 	background-color: red;
+	 	display: inline-block;
+	 }
+</style>
+<script type="text/javascript">
+	function add(){
+		//得到行数和列数
+		var rowInput = document.getElementById("row");
+		var colInput = document.getElementById("col");
+		var row = rowInput.value;
+		var col = colInput.value;
+		//得到页面中的大的div
+		var big = document.getElementById("big");
+		//遍历每一行
+		for(var i=0;i<row;i++){
+			var str = "<div></div>";
+			//遍历每一行的个数
+ 			for(var j=0;j<col;j++){
+ 			 	str+="<div class='small'></div>";
+			}
+			//str+="</div>";
+			//把得到的一行完整的html代码添加到大的div中
+			big.innerHTML+=str;
+		}
+	}
+</script>
+</head>
+<body>
+<input type="text" id="row"> 
+<input type="text" id="col"> 
+<input type="button" value="添加" onclick="add()">
+<div id="big">
+	 
+</div>
+</body>
+</html>

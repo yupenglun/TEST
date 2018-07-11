@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function pf(){
+		/* 1. 获取文本框 */
+		var numberInput = 
+			document.getElementById("numberinput");
+		/*  2. 获取文本框内容*/
+		var number = numberInput.value;
+		/* 3.判断是否是数字  */
+		if(isNaN(number)){
+			alert("输入错误");
+		}else{/* 是数字 */
+			/* 4.得到结果的div */
+			var resultDiv = 
+				document.getElementById("resultdiv");
+			/* 5.把平方的结果显示到div中 */	
+			resultDiv.innerText= number*number;
+		}
+	}
+</script>
+</head>
+<body>
+<input id="numberinput" type="text">
+<input type="button" value="平方" onclick="pf()">
+<div id="resultdiv"></div>
+</body>
+</html>
+
+
+
+
+
+
+

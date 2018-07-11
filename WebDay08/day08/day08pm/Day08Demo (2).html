@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+
+function addfn(){
+	//得到用户输入的内容
+	var info = document.getElementById("input1").value;
+	var s = document.getElementById("input2").value;
+	//分隔出每一个关键字 并装到了数组中
+	var arr = info.split(s);
+	//准备 装html的字符串 并且添加一个ul的开头
+	var str = "<ul>";
+	//遍历每一个关键字 把关键字装进li中的a标签中
+	for(var i=0;i<arr.length;i++){
+		str+="<li><a href='http://www.tmooc.cn'>"+arr[i]
+		+"</a></li>";
+	} 
+	str+="</ul>";
+	//把ul添加到body中
+	document.body.innerHTML+=str;
+	
+}
+	
+	
+</script>
+</head>
+<body>
+<input type="text" id="input1">
+<input type="text" id="input2">
+<input type="button" value="添加热点"
+	onclick="addfn()">
+<div id="big"></div>
+</body>
+</html>

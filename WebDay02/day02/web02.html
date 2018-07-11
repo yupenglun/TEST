@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>web02</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h2>课程回顾：</h2>
+<ol>
+<li>
+<p>html页面结构</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+</li>
+<li>
+<p>head里面的内容</p>
+<pre><code>-meta： charset 字符集  name=&quot;keywords&quot; content=&quot;a,b,c&quot;
+
+-title: 指定页面的标题
+</code></pre>
+
+</li>
+<li>
+<p>body里面的内容 给用户看的内容写在这里面</p>
+</li>
+<li>
+<p>h1-h6 标题    align=&quot;center/left/right&quot;</p>
+</li>
+<li>p 段落   上下有空行</li>
+<li>hr  水平分割线</li>
+<li>
+<p>列表： 定义列表（层级列表）， 无序列表，有序列表</p>
+<pre><code>&lt;dl&gt;
+    &lt;dt&gt;标题&lt;/dt&gt;
+    &lt;dd&gt;数据内容&lt;/dd&gt;
+    &lt;dt&gt;标题&lt;/dt&gt;
+    &lt;dd&gt;数据内容&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;ul type=&quot;circle&quot;&gt;
+    &lt;li&gt;列表项&lt;/li&gt;
+    &lt;li&gt;列表项&lt;/li&gt;
+    &lt;li&gt;列表项&lt;/li&gt;    
+&lt;/ul&gt;
+
+&lt;ol type=&quot;I&quot; start=&quot;3&quot;&gt;
+    &lt;li&gt;列表项&lt;/li&gt;
+    &lt;li&gt;列表项&lt;/li&gt;
+    &lt;li&gt;列表项&lt;/li&gt;    
+&lt;/ol&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;列表项一&lt;/li&gt;
+    &lt;li&gt;列表项一&lt;/li&gt;
+        &lt;ol&gt;
+            &lt;li&gt;列表项二&lt;/li&gt;
+            &lt;li&gt;列表项二&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;li&gt;列表项一&lt;/li&gt;   
+&lt;/ul&gt;
+</code></pre>
+
+</li>
+<li>分区标签</li>
+<li>div: 独占一行</li>
+<li>span: 共占一行</li>
+<li>header article footer</li>
+<li>元素分类</li>
+<li>块级元素：独占一行的元素，div p h1-6  hr</li>
+<li>行内元素：共占一行的元素，span i和em b和strong u del和s </li>
+<li>
+<p>特殊字符</p>
+<pre><code>- 空格  &amp;nbsp;
+- &lt;   &amp;lt;
+- &gt;   &amp;gt;
+- 换行  &lt;br&gt;
+</code></pre>
+
+</li>
+<li>
+图片标签： img
+常见属性： 
+</li>
+<li>alt:图片不显示的时候显示的文本</li>
+<li>src: 图片的路径  包括相对路径和绝对路径 http://www.baidu.com/ab.jpg</li>
+<li>title: 鼠标悬停的时候显示的内容</li>
+<li>width/height: px像素   %百分比  只设置宽度 高度会按照原始比例缩放</li>
+<li>图片类型： jpg  png  gif</li>
+</ol>
+<h3>图像地图</h3>
+<ul>
+<li>
+<p>什么是图像地图：可以将图片的某个区域作为可以点击的连接</p>
+</li>
+<li>
+<p>使用方式：
+    <img src="../imgs/k.jpg" width="400px" 
+		usemap="#mymap">
+	<!--shape：表示形状  
+	coords:表示坐标 前两个值是圆心坐标 最后一个是半径
+	href:连接地址
+	-->  <!-- area:区域 -->
+	<map name="mymap" id="mymap">
+		<area shape="circle" 
+		coords="150,100,50" href="../imgs/2.gif">
+		<!-- rect:矩形 -->
+		<area shape="rect" 
+		coords="50,50,150,150" href="http://www.tmooc.cn">
+	</map></p>
+</li>
+<li>map中name和id属性：表示地图的唯一标示，把地图给到图片的时候使用</li>
+<li>shape：表示形状 circle和rect</li>
+<li>coords：表示坐标 圆形：圆心坐标和半径   矩形：两个对角线的点的坐标</li>
+<li>href:连接地址，可以相对路径，也可以绝对路径，href可以指向的内容有：1. 指向新的图片 2. 指向一个新的页面 3. 指向非图片任意文件 会自动下载</li>
+</ul>
+<h3>练习：页面中添加一张图片500px*500px 当点击图片左上角区域的时候页面跳转到 http://doc.tedu.cn，点击图片中间圆形区域跳转到一张新的图片</h3>
+<h3>超链接 <a></a></h3>
+<ul>
+<li>常用属性：</li>
+<li>href: 连接地址，可以相对路径，也可以绝对路径，href可以指向的内容有：1. 指向新的图片 2. 指向一个新的页面 3. 指向任意文件 如果浏览器不能直接打开则会自动下载</li>
+<li>
+<p>target=&quot;_blank&quot; 跳转到新的页面</p>
+</li>
+<li>
+<p>锚点的使用方式： 先通过a标签创建一个锚点<a id="a" name="a"><a> 通过另外一个a标签跳转到锚点所在的位置 <a href="#a">跳转</a></p>
+</li>
+</ul>
+<h3>表格 <table></h3>
+<ul>
+<li>
+<p>常见属性：</p>
+<pre><code>border:表示外边框的粗细默认值为0
+cellspacing:单元格间距和单元格距外边框的距离
+cellpadding:内容与单元格边框的距离
+</code></pre>
+
+</li>
+</ul>
+<h3>内容回顾：</h3>
+<ol>
+<li>图像地图 map 属性 name 和id   </li>
+<li>子标签 area 属性 shape形状（circle,rect） coords 坐标 </li>
+<li><img usemap="#id"> </li>
+<li>超链接 a </li>
+<li>属性： 
+href：路径  相对路径和绝对路径  内容：图片 页面  文件
+target=&quot;_blank&quot;: 跳转到新的页面</li>
+<li>
+<p>锚点     
+</p>
+<pre><code>&lt;a id  name&gt;&lt;/a&gt; &lt;a href=&quot;#id/name&quot;&gt;
+</code></pre>
+
+</li>
+<li>表格 table   tr   td <br />
+属性：border 边框的粗细   cellspacing：单元格间距和距离外边框的距离 cellpadding：单元格内容距单元格的距离 colspan:跨列    rowspan：跨行</li>
+</ol>
+<h3>课程表练习 代码参见demo03.html</h3>
+<h4>表格分组</h4>
+<ul>
+<li>thead: 头分组</li>
+<li>tbody： 体分组</li>
+<li>tfoot: 脚分组</li>
+<li>
+<p>分组标签没有显示效果，提高代码可读性</p>
+</li>
+<li>
+<p>th: table header  表头  字体会加粗</p>
+</li>
+<li>
+<p>caption:  表格标题 内容会自动居中显示在表上面</p>
+<pre><code>&lt;table border=&quot;1&quot; align=&quot;center&quot;&gt;
+    &lt;caption&gt;订单列表&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;编号&lt;/th&gt;
+            &lt;th&gt;名称&lt;/th&gt;
+            &lt;th&gt;价格&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;键盘&lt;/td&gt;
+            &lt;td&gt;380&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;鼠标&lt;/td&gt;
+            &lt;td&gt;120&lt;/td&gt;
+        &lt;/tr&gt;       
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan=&quot;2&quot;&gt;合计：&lt;/td&gt;
+            &lt;td&gt;500元&lt;/td&gt;
+        &lt;/tr&gt;   
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+
+</li>
+</ul>
+<h3>表单</h3>
+<ul>
+<li>
+<p>什么是表单： 在浏览器中获取用户输入的内容传递给服务器时 一般使用的都是表单</p>
+</li>
+<li>
+<p>学习表单主要学习的是和表单结合使用的各种控件，包括：文本框，密码框，单选，多选（复选框），下拉列表，文件选择，时间选择，按钮</p>
+</li>
+<li>
+<p>文本框： name：数据提交到服务器时，告诉服务器文本框值的含义
+placeholder：占位文本  value：默认值  maxlength：最大字符长度 readonly:只读</p>
+<pre><code>用户名：&lt;input type=&quot;text&quot; name=&quot;username&quot; 
+placeholder=&quot;说点儿什么。。。&quot; value=&quot;abc&quot; 
+maxlength=&quot;5&quot; readonly=&quot;readonly&quot; &gt;
+</code></pre>
+
+</li>
+<li>
+<p>密码框：</p>
+<pre><code>密码:&lt;input type=&quot;password&quot;&gt;
+</code></pre>
+
+</li>
+<li>
+<p>单选框：</p>
+<pre><code>性别:&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;男&quot;&gt;男
+&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;女&quot;&gt;女
+</code></pre>
+
+</li>
+<li>
+<p>多选（复选框）</p>
+<pre><code>兴趣爱好：&lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;lq&quot;&gt;打篮球
+&lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;wz&quot;&gt;王者农药
+&lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;py&quot;&gt;找异性做朋友
+&lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot;
+value=&quot;sing&quot; id=&quot;cg&quot;&gt;&lt;label for=&quot;cg&quot;&gt;唱歌&lt;/label&gt;
+</code></pre>
+
+</li>
+<li>
+<p>标签label：如果想实现点击文本让对应的控件响应 可以使用label标签</p>
+<pre><code>&lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot;
+value=&quot;sing&quot; id=&quot;cg&quot;&gt;&lt;label for=&quot;cg&quot;&gt;唱歌&lt;/label&gt;
+</code></pre>
+
+</li>
+<li>
+<p>文件选择的控件：用于上传文件</p>
+<pre><code>靓照:&lt;input type=&quot;file&quot; name=&quot;pic&quot;&gt;
+</code></pre>
+
+</li>
+<li>
+<p>日期选择控件： </p>
+<pre><code>生日:&lt;input type=&quot;date&quot; name=&quot;birthday&quot;&gt;
+</code></pre>
+
+</li>
+<li>
+<p>隐藏域:当需要提交一些用户看不见的信息的时候使用隐藏域</p>
+<pre><code>&lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;3424&quot;&gt;
+</code></pre>
+
+</li>
+<li>
+<p>文本域：需要输入多行文本数据的时候使用 </p>
+<pre><code>个人简介：&lt;textarea rows=&quot;3&quot; cols=&quot;20&quot; 
+name=&quot;intro&quot;&gt;这家伙很懒。。。。&lt;/textarea&gt;
+</code></pre>
+
+</li>
+</ul>
+<h3>下拉选</h3>
+<pre><code>    所在城市:&lt;select name=&quot;city&quot;&gt;
+        &lt;option&gt;请选择&lt;/option&gt;
+        &lt;option value=&quot;bj&quot;&gt;北京&lt;/option&gt;
+        &lt;option value=&quot;sh&quot;&gt;上海&lt;/option&gt;
+        &lt;option value=&quot;gz&quot;&gt;广州&lt;/option&gt;
+    &lt;/select&gt;
+</code></pre>
+
+<h4>按钮</h4>
+<pre><code>    &lt;input type=&quot;submit&quot; value=&quot;注册&quot;&gt;
+    &lt;input type=&quot;reset&quot;&gt;
+    &lt;input type=&quot;button&quot; value=&quot;自定义按钮&quot;&gt;
+</code></pre>
+
+<h2>课程回顾：</h2>
+<ol>
+<li>图像地图 map 属性 name和id 子标签  area 属性：shape（circle rect） coords（坐标） href 路径  图片  页面  下载   &lt;img usemap=&quot;#id&quot;</li>
+<li>超链接 a  属性  href  target=&quot;_blank&quot;   <a id name></a>   href=&quot;#id&quot; </li>
+<li>表格 table tr td  th  thead tbody tfoot caption  属性：border cellspacing 单元格间距和外边框的距离 cellpadding 内容和单元格的距离 
+rowspan clospan  bgcolor   bordercolor</li>
+<li>
+<p>表单：input type=? 文本框 密码框 单选 多选  文件  日期 隐藏  按钮 
+label: 和 单选 复选结合使用
+下拉 文本域</p>
+<pre><code>&lt;select name=&quot;&quot;&gt;
+    &lt;option value=&quot;&quot;&gt;&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+
+</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

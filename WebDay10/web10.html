@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>web09</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h3>课程回顾：</h3>
+<ol>
+<li>String相关api</li>
+<li>创建字符串  var str1 = &quot;abc&quot;;  var str2 = new String(&quot;abc&quot;);</li>
+<li>转大小写  toUpperCase()  toLowerCase();</li>
+<li>获取某个位置的字符 charAt(2)</li>
+<li>查找字符串出现的位置   indexOf()  lastIndexOf()</li>
+<li>截取字符串 substring(star,[end])</li>
+<li>替换字符串 replace(old,new)</li>
+<li>分隔字符串 str.split(&quot;,&quot;);</li>
+<li>把数值转成字符串 toFixed(n)  n代表小数的位数</li>
+<li>数组相关</li>
+<li>创建数组  var arr1 = [1,&quot;abc&quot;,true]; var arr2= new Array();</li>
+<li>添加内容 arr2.push(18);</li>
+<li>修改长度  arr1.length=1;</li>
+<li>获取内容  arr1[2];</li>
+<li>删除  delete arr1[0];</li>
+<li>内容反转  reverse();</li>
+<li>排序  sort();</li>
+<li>自定义排序  sort(function(a,b){ return a-b;});</li>
+<li>日期相关</li>
+<li>
+创建日期： var date = new Date();
+var date = new Date(&quot;2008/12/22 08:18:23&quot;);
+</li>
+<li>获取时间分量  getFullYear()  getMonth()  getDate() getDay() getHours()   getMinutes()  setSeconds()</li>
+<li>获取年月日  获取 时分秒   date.toLocaleDateString()  date.toLocaleTimeString()</li>
+<li>
+正则 <br />
+. 任意字符除了换行    \d 任意数字  \w 任意数字字母下划线 \s任意空白  ^开始  $结束
+</li>
+<li>
+创建方式   var reg1 = /^a\d{3,8}m$/;
+		var reg2 = new RegExp(&quot;规则&quot;,&quot;模式&quot;)
+</li>
+<li>
+正则对象函数
+查找  reg1.exec(str)    校验 reg1.test(str)
+</li>
+<li>
+字符串正则相关函数
+str.match(reg1)    str.replace(reg1,new);
+</li>
+</ol>
+<h4>事件的取消</h4>
+<ul>
+<li>在元素的事件中如果执行 return false则可以让当前的事件取消执行</li>
+<li>
+以下代码为取消事件的典型案例
+&lt;a href=&quot;http://www.baidu.com&quot; onclick=&quot;return confirm(&quot;您确认访问百度吗？&quot;)&quot;&gt;百度</a>
+</li>
+</ul>
+<h3>登录校验的高端版本 代码参见 demo02.html</h3>
+<h4>隐藏元素的两种方式：</h4>
+<ol>
+<li>display:none 脱离文档流</li>
+<li>visibility:hidden(隐藏)/visible(显示) 不脱离文档流</li>
+</ol>
+<h4>接触的新的事件  onblur（元素失去焦点） onsubmit(表单提交事件)</h4>
+<h3>自定义对象</h3>
+<h4>两种创建对象的方式</h4>
+<pre><code>    /* 第一种 通过声明函数的形式创建对象 */
+
+    /* 创建一个带构造方法的对象 */
+    /* function Person(name,age){
+    //声明属性
+    this.name=name;
+    this.age=age;
+
+    //声明方法 
+    this.run=function(){
+        alert(&quot;name:&quot;+name+&quot; age:&quot;+age);
+    }
+    }
+    //创建对象
+    var p1 = new Person(&quot;李白&quot;,38);
+    //调用对象的方法
+    p1.run(); */
+
+    /* 创建一个空对象  */
+    /*  function Person(){}
+    var p1 = new Person();
+    //创建对象之后 再添加属性和方法
+    p1.name=&quot;刘备&quot;;
+    p1.age=18;
+    p1.run = function(){
+        alert(&quot;name:&quot;+this.name+&quot; age:&quot;+this.age);
+    }
+    p1.run(); */
+
+    /* 第二种 以声明变量的形式创建对象 */
+    var p = {
+            &quot;name&quot;:&quot;曹操&quot;,
+            &quot;age&quot;:18,
+            &quot;run&quot;:function(){
+                alert(&quot;name:&quot;+this.name+&quot; age:&quot;+this.age);
+            }
+    }
+    p.run();
+</code></pre>
+
+<h3>DHTML</h3>
+<ul>
+<li>简介： Dynamic(动态) HTML ， 这并不是新的技术，只是使用 HTML+CSS+JS得到一个动态页面效果称为DHTML</li>
+<li>DHTML： 包括  DOM  BOM</li>
+<li>
+<p>BOM：Browser（浏览器）Object（对象）Model（模型），在BOM中存在一些和浏览器相关的对象包括：location，document，history，screen，navigator</p>
+</li>
+<li>
+<p>DOM：Document（文档）Object（对象）Model（模型），存放和页面相关的对象</p>
+</li>
+</ul>
+<h4>BOM</h4>
+<h3>window</h3>
+<pre><code>window中所有的属性在调用的时候可以省略掉window ，window下的属性也称为全局属性 window下的函数也称为全局函数
+</code></pre>
+
+<h4>window下的全局函数</h4>
+<pre><code>parseInt()和parseFloat() 
+alert()//弹出框
+confirm()//确认框 
+prompt()//弹出文本框 
+isNaN()//判断是否是非数字
+</code></pre>
+
+<h4>window下的全局属性</h4>
+<ul>
+<li>
+location:位置
+location.href 可以获取和设置当前浏览的页面地址
+location.reload();//页面重新加载（刷新）
+</li>
+<li>
+<p>history:浏览历史</p>
+<p>history.length 得到当前窗口访问过的页面数量
+history.back() 返回上一个页面
+history.forward() 前往下一个页面 
+history.go(num)  前往某个页面 0代表当前页面 1代表下一个页面 -1代表上一个页面  2代表下两个页面</p>
+</li>
+<li>
+<p>screen:屏幕
+width/height: 得到当前屏幕的分辨率 
+availWidth/availHeight: 可用屏幕的宽高 </p>
+</li>
+<li>
+<p>navigator：导航/帮助
+navigator.userAgent 得到客户端浏览器版本信息</p>
+</li>
+<li>
+<p>document:文档（页面）</p>
+</li>
+</ul>
+<h4>Window相关的事件</h4>
+<ul>
+<li>点击事件： 点击窗口任何位置的时候都会响应</li>
+<li>加载完成事件： 当页面元素全部加载完成的时候响应</li>
+<li>获取焦点事件： 每次页面激活的时候响应</li>
+<li>
+失去焦点事件： 每次页面失去激活状态的时候响应
+	/* 窗口点击事件 <em>/
+	onclick=function(){
+		/</em> alert(&quot;屏幕被点击了&quot;); <em>/	
+	}
+	/</em> 页面加载完成事件 <em>/
+	/</em> 如果页面加载完对某些元素进行操作的话 就需要使用此事件 <em>/
+	onload=function(){
+		/</em> alert(&quot;加载完成了&quot;); <em>/
+		var input = document.getElementById(&quot;myinput&quot;);
+		input.value=&quot;abcd&quot;;
+	}
+	//以下代码存在获取不到元素的问题 因为页面还没加载完
+	/</em> var input = document.getElementById(&quot;myinput&quot;);
+	input.value=&quot;abcd&quot;; <em>/
+	/</em> 焦点可以理解成页面的激活状态 
+	如果有需求每次离开页面和每次回到页面时做某些事，
+	则把代码写在这两个事件中  */
+	onfocus = function(){
+		console.log(&quot;页面焦点来了&quot;);
+	}
+	onblur = function(){
+		console.log(&quot;页面焦点走了&quot;); 
+	}
+</li>
+</ul>
+<h4>eval()函数</h4>
+<ul>
+<li>
+<p>可以将字符串以js代码的形式执行</p>
+<pre><code>eval(&quot;alert('abc')&quot;);
+</code></pre>
+
+</li>
+</ul>
+<h3>计算器高级版步骤：</h3>
+<ul>
+<li>搭建界面：</li>
+<li>一个大的div 里面添加两个小的div，
+第一个小的div里面加一个p标签和一个按钮
+第二个小的div里面添加16个按钮 </li>
+<li>通过css属性选择器选中所有的按钮 设置相同宽高，边框粗细和颜色，上下外边距 设置浮动
+<input type="button" onclick="myfn(this)"></li>
+</ul>
+<h4>通过js给元素添加样式</h4>
+<ul>
+<li>
+<p>通过js给元素添加的样式为内联样式 优先级最高 获取的也是内联样式 ，获取不到非内联样式的值</p>
+<p>div.style.width=&quot;100px&quot;;</p>
+</li>
+</ul>
+<h4>定时器</h4>
+<ul>
+<li>var id = setInterval(函数,时间间隔 毫秒)</li>
+<li>clearInterval(定时器的id);</li>
+</ul>
+<h4>通过标签名获取元素对象</h4>
+<pre><code>    var imgs = document.getElementsByTagName(&quot;img&quot;);
+</code></pre>
+
+<h4>假轮播图实现步骤：</h4>
+<ol>
+<li>搭建界面在body中添加5张图片（img标签）</li>
+<li>添加script标签开始写js代码，声明一个全局的数值变量count=0</li>
+<li>通过定时器每隔两秒钟让count的数值自增1</li>
+<li>在定时器中声明一个数值变量visibleIndex 值为 count对5取余的结果，此时的visibleIndex的值应该是0-4不断的循环 （此时 可写console.log()测试一下）</li>
+<li>在定时器中，通过刚学过的getElementsByTagName函数得到页面中所有的img标签，此时得到的是一个数组</li>
+<li>在定时器中 遍历数组，判断如果i的值等于visibleIndex的值的话让当前遍历的img标签显示（display:inline或block）不等于visibleIndex的话让img标签隐藏(display:none)  搞定！</li>
+</ol>
+<h3>DOM</h3>
+<ul>
+<li>Document Object Modle: 文档对象模型</li>
+<li>学习DOM主要为了实现页面元素的增删改查操作 </li>
+</ul>
+<h4>获取元素的几种方式</h4>
+<pre><code>    /* 获取元素的几种方式 */
+    /* 1. 通过id获取元素*/
+    var input = 
+        document.getElementById(&quot;myinput&quot;);
+    /* 2. 通过标签名获取元素  得到的是数组 */
+    var inputs = 
+        document.getElementsByTagName(&quot;input&quot;);
+    /* 3. 通过层级关系查找元素 */
+    /* 3.1 得到上级元素(父元素) */ 
+    var mydiv = input.parentElement;
+    /* 3.2 得到子元素们 和 元素内部的文本内容*/
+    var nodes = mydiv.childNodes;
+    /* 得到子元素的数量  */
+    var elementsCount = mydiv.childElementCount;
+    /* 3.3 得到元素的兄弟元素们 */ 
+    var nodes2 = input.parentElement.childNodes;
+    /* 4. 通过name属性的值获取元素 */
+    var radius = document.getElementsByName(&quot;gender&quot;);
+    /* 5. 通过class属性的值获取元素 */
+    var elements = document.getElementsByClassName(&quot;c1&quot;);
+</code></pre>
+
+<h4>创建元素</h4>
+<ul>
+<li>var li = document.createElement(&quot;li&quot;);</li>
+</ul>
+<h4>添加元素</h4>
+<ul>
+<li>最后添加 :  父元素.appendChild(新元素);</li>
+<li>插入某个元素的前面： 父元素.insertBefore(新元素,弟弟元素);</li>
+</ul>
+<h4>删除元素</h4>
+<ul>
+<li>父元素.removeChild(被删除的元素);</li>
+<li>被删除的元素.parentElement.removeChild(被删除的元素);</li>
+</ul>
+<h4>作业</h4>
+<p>每隔0.5秒 往页面最左侧添加一个元素 每个元素往屏幕右侧移动 ，移动过程中点击到算成功一次  跑出屏幕 没点到的话算失败一次   失败次数到10的时候 弹出对话框提示 游戏结束  </p>
+<p>随机数 Math.random</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

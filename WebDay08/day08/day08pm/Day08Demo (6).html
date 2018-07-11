@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.ok{
+		color: green;
+	}
+	.error{
+		color: red;
+	}
+</style>
+<script type="text/javascript">
+function check(){
+	var reg = /^\w{6,10}$/;
+	//得到用户名和密码的提示span
+	var unspan = document.getElementById("unspan");
+	var pwspan = document.getElementById("pwspan");
+	//得到用户输入的用户名
+	var username = 
+		document.getElementById("username").value;
+	//判断用户是否符合标准
+	if(reg.test(username)){
+		unspan.className="ok";
+	}else{
+		unspan.className="error";
+	}
+	//得到用户输入的密码
+	var password = 
+		document.getElementById("password").value;
+	//判断密码是否符合标准
+	if(reg.test(password)){
+		pwspan.className="ok";
+	}else{
+		pwspan.className="error";
+	}
+	
+}
+
+</script>
+</head>
+<body>
+<input type="text" id="username"><span id="unspan">6-10位数字字母下划线</span><br>
+<input type="text" id="password"><span id="pwspan">6-10位数字字母下划线</span><br>
+<input type="button" value="校验" onclick="check()">
+
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>web04</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h2>课程回顾：</h2>
+<ol>
+<li>CSS 层叠样式表   美化页面 </li>
+<li>引入方式：三种 </li>
+<li>内联：在标签的 style属性中填写 不能重用  优先级最高</li>
+<li>内部：在head里面的Style标签中写  可以在当前页面中复用 不能复用其它页面</li>
+<li>外部：创建一个css的文件 在head里面的link标签引入  <link rel="stylesheet" href="a.css"></li>
+<li>优先级： 内联最高    后执行会覆盖先执行的</li>
+<li>选择器：</li>
+<li>基础选择器： 标签名选择器    id选择器 #id{}  类选择器 .class{}</li>
+<li>属性选择器： 基础选择器[属性名='值']{}</li>
+<li>派生选择器： 基础选择器1 基础选择器2{}</li>
+<li>子元素选择器： 基础选择器1&gt;基础选择器2{}</li>
+<li>分组选择器： h1,span,div,#abc,.m{}</li>
+<li>伪类选择器： a:visited：访问过的状态  a:link：未访问状态  a:hover：悬停状态 a:active：点击时状态</li>
+<li>任意元素选择器：*{}</li>
+<li>元素宽高属性：  width/height </li>
+<li>颜色：1.颜色名称  2. 6位16进制 #00ff00 3. 3位16进制 #0f0 4. rgb(255,0,0) 5. rgba(0,0,255,0.5)</li>
+<li>背景图片：background-image:url(路径)  大小 background-size:100px 200px  设置是否重复 background-repeat：no-repeat<br />
+设置图片位置 backtround-position:  right center;    left right top bottom center, 通过百分比控制</li>
+<li>盒子模型： 外边距 边框 内边距
+元素所占宽度： 左外边距+左边框+左内边距+元素宽度+右内边距+右边框+右外边距</li>
+<li>
+外边距：元素距相邻元素或上级元素的距离
+margin-left/right/top/bottom
+margin:10px; 四个方向都是10px
+margin:10px 20px 上下10px 左右20px
+margin:0 auto 水平居中
+margin:10px 20px 30px 40px 上右下左
+</li>
+</ol>
+<h3>边框</h3>
+<pre><code>/* border: 15px groove red; */
+    border-bottom: 1px solid blue;
+    border-top: 5px solid blue;
+    border-left: 3px solid purple;
+    border-right: 10px solid red;
+    设置圆角 值越大 越圆
+    border-radius:10px;
+</code></pre>
+
+<ul>
+<li>块级元素：四个边框全部生效，四个边框都会影响元素所占的范围</li>
+<li>行内元素：四个边框全部生效，上下不影响元素所占高度 左右影响元素所占宽度</li>
+</ul>
+<h3>内边距</h3>
+<pre><code>    padding-left: 30px;
+    padding-top: 50px;
+    padding-bottom:20px;
+    padding-right:40px;
+    padding: 10px;
+</code></pre>
+
+<ul>
+<li>内容到边框的距离称为内边距</li>
+<li>如果移动元素文本内容，只能通过元素添加内边距移动</li>
+<li>
+<p>如果移动元素的子元素，可以通过设置父元素的内边距（改变父元素的宽高），也可以设置子元素的外边距</p>
+</li>
+<li>
+<p>块级元素的内边距全部生效 会影响元素所占宽高</p>
+</li>
+<li>行内元素的内边距全部生效 只会影响元素的所占宽度 不会影响高度</li>
+</ul>
+<h4>块级元素和行内元素关于盒子模型的总结</h4>
+<ol>
+<li>
+<p>块级元素： 可以设置宽高，外边距全部生效 会影响所占宽高，边框全部生效 会影响所占宽高，内边距全部生效 会影响所占宽高</p>
+</li>
+<li>
+<p>行内元素： 不可以设置宽高 由内容决定，外边距左右生效 上下不生效，边框全部生效 左右影响宽度 上下不影响高度， 内边距全部生效 左右影响宽度 上下不影响高度。</p>
+</li>
+</ol>
+<h3>文本相关属性</h3>
+<pre><code>    /* 文本对齐方式 center、left、right*/
+    text-align: center;
+    /* 文本修饰
+     none 没有修饰 
+    underline：下划线
+    overline：上划线
+    line-through:删除线
+    */
+    text-decoration: line-through;
+    /* 文本颜色  */
+    color: red;
+    /* 文本阴影 第一个参数是阴影颜色 
+    第二三个是x和y轴的偏移位置 
+    最后一个值是模糊程度越小越清晰 0是不模糊 */
+    text-shadow:#0f0 5px 5px 1px;
+
+    /* 通过设置行高让文本上下居中 */
+    line-height: 30px;
+</code></pre>
+
+<h3>字体相关属性</h3>
+<pre><code>    /* 字体大小 单位像素 */
+    font-size: 20px; 
+    /* 字体加粗 bold 
+    bolder normal普通粗细 lighter 比普通细一些 */
+    /* font-weight: bold; */
+    font-family: &quot;黑体&quot;; 
+    /* 字体样式  斜体*/
+    font-style: italic; 
+</code></pre>
+
+<h3>回顾上午内容：</h3>
+<ol>
+<li>
+<p>边框    块级：都生效 都影响宽高    行内：都生效 影响宽度 不影响高度
+border-radius: 值越大 越圆</p>
+</li>
+<li>
+<p>内边距： 块级：都生效 都影响宽高    行内：都生效 影响宽度 不影响高度</p>
+</li>
+<li>外边距   块级： 都生效 都影响宽高  行内：上下不生效</li>
+<li>文本：  文本水平对齐：text-align:center/left/right  text-decoration:none/underline/overline/line-through  ,color,text-shadow:颜色 x偏移 y偏移 模糊度 值越小越清晰  line-height行高</li>
+<li>字体： font-size  font-weight  font-family font-style</li>
+</ol>
+<h3>学子商城首页练习 代码参见 demo04.html</h3>
+<h3>Overflow 溢出</h3>
+<ul>
+<li>
+控制超出父元素的内容是否显示时 使用该属性
+	/* hidden：超出范围不显示
+	  visible:超出显示（默认）
+	  scroll: 超出滚动显示 */
+	overflow: hidden;
+</li>
+</ul>
+<h3>display 显示</h3>
+<ul>
+<li>控制元素的显示方式</li>
+<li>block： 块级元素的默认值</li>
+<li>inline：行内元素的默认值</li>
+<li>inline-block:行内块</li>
+</ul>
+<h3>把超链接a标签改成查看详情的样式步骤：</h3>
+<ol>
+<li>把a标签显示方式改成行内块（因为a标签是行内元素 改成行内块才能改宽高）</li>
+<li>修改元素的宽高和背景颜色</li>
+<li>修改元素的字体大小和字体颜色</li>
+<li>去掉文本的下划线</li>
+<li>文本左右居中</li>
+<li>文本上下居中</li>
+<li>加圆角</li>
+<li>
+<p>实现代码：</p>
+<pre><code>a{
+display: inline-block;
+width: 132px;
+height: 40px;
+background-color: #0aa1ed;
+color: white;
+text-decoration: none;
+font-size: 20px;
+text-align: center;
+line-height: 40px;
+border-radius:5px;
+}
+</code></pre>
+
+</li>
+</ol>
+<h3>day01</h3>
+<ol>
+<li>
+<p>html结构：</p>
+<pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt; 给浏览器看
+&lt;body&gt;&lt;/body&gt; 给用户看的
+&lt;/html&gt;
+</code></pre>
+
+</li>
+<li>head里面的内容：</li>
+<li>meta ： charset 控制页面解析的字符集   keywords 关键字</li>
+<li>title： 设置页面标题</li>
+<li>h1-h6   p    hr</li>
+<li>列表标签： 三种  层级列表  无序 有序</li>
+<li>dl  dt  dd </li>
+<li>ul  li</li>
+<li>ol li</li>
+<li>特殊字符     空格： &nbsp;   小于号 &lt; 大于号 &gt; 换行<br></li>
+<li>图片  img 属性  src 路径    alt  title  </li>
+</ol>
+<h3>day02</h3>
+<ol>
+<li>图像地图 map 属性 id和name  子标签  area  属性：shape （circle和rect） coords  href 路径   <img usemap="#id"></li>
+<li>超链接 a  href     <a id name></a>  <a href="#id/name">回到顶部</a></li>
+<li>表格  table tr td th thead tbody tfoot caption 属性：border  cellspacing  cellpadding  rowspan  colspan</li>
+<li>表单form  文本框text  密码框password  单选radio 多选checkbox 隐藏hidden 日期date 文件file 按钮button/submit/rest 
+下拉选<select><option></option>  文本域<textarea></textarea></li>
+</ol>
+<h3>day03-04</h3>
+<ol>
+<li>CSS 层叠样式表 美化页面</li>
+<li>引入方式： 1. 内联 2. 内部 3.外部</li>
+<li>内联 ：  在元素的style属性中  不能复用  优先级最高</li>
+<li>内部： 在head里面style标签中写  当前页面中可以复用 不能复用其它页面</li>
+<li>外部 ： 创建css文件 在head中的link标签中引入 <link rel="stylesheet" href="a.css"> 可以多个页面复用</li>
+<li>选择器：</li>
+<li>标签名   id选择器   类选择器   基础选择器</li>
+<li>属性选择器    基础选择器[属性名='值']</li>
+<li>派生选择器   基础选择器1 基础选择器2{}</li>
+<li>子元素选择器 基础选择器1&gt;基础选择器2{}</li>
+<li>分组选择器  h1,span,div,#abc,.mm{}</li>
+<li>伪类选择器   visited 访问过  link未访问  hover悬停 active点击时</li>
+<li>任意元素选择器  *{}</li>
+<li>颜色    颜色名 6位16进制  3位16进制  rgb rgba </li>
+<li>盒子模型：</li>
+<li>外边距： 元素和相邻元素或上级元素的距离 行内：上下不生效</li>
+<li>边框 ：  行内：都生效  但是上下不影响所占高度</li>
+<li>内边距 内容距离边框的距离    行内： 都生效  但是上下不影响所占高度</li>
+<li>
+<p>背景图片：<br />
+backgroud-image:url(&quot;路径&quot;)
+backgroud-size:100px 200px
+backgroud-repeat: no-repeat
+backgroud-position: 横向 纵向，百分比控制   left right top bottom center</p>
+</li>
+<li>
+<p>文本相关 水平对齐  text-align: left/center/right  color  行高line-height   文本修饰： text-decoration: none/underline/overline/line-through text-shadow: 颜色 x偏移 y偏移 模糊度</p>
+</li>
+<li>字体   font-size      font-weight：bold   font-family  font-style:italic</li>
+<li>溢出   overflow： hidden visible scroll</li>
+<li>display： block 块级  inline 行内   inline-block 行内块</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+	background-image: url("img/regist/zc.jpg");
+	background-repeat: no-repeat;
+	background-position: top center;
+	font-family: "微软雅黑"
+}
+h1{
+	text-align: center;
+	margin: 190px 0 30px 0;
+	color: #900;
+	font-size: 
+}
+table {
+	margin: 0 auto;
+}
+.lefttd{
+	font-size: 18;
+	text-align: right;
+}
+input{
+	width: 150px;
+	height: 22px;
+	border: 1px solid #ccc;
+	
+}
+#yzmimg{
+	vertical-align: top;
+	
+}
+#yzminput{
+	width: 80px;
+}
+#btntd{
+	text-align: center;/* 按钮居中 */
+}
+#btntd input{
+	width: 127px;
+	height: 44px;
+	font-size: 20px;
+	color: white;
+	font-weight: bold;
+	background-color: red;
+	border-radius:4px;
+}
+
+td{
+	padding-top: 15px;
+}
+</style>
+</head>
+<body>
+	<form action="">
+		<h1>欢迎注册Esaymall</h1>
+	<table>
+		<tr>
+			<td class="lefttd">用户名:</td>
+			<td><input type="text"></td>
+		</tr>
+		<tr>
+			<td class="lefttd">密码:</td>
+			<td><input type="password"></td>
+		</tr>
+		<tr>
+			<td class="lefttd">确认密码:</td>
+			<td><input type="password"></td>
+		</tr>
+		<tr>
+			<td class="lefttd">昵称:</td>
+			<td><input type="text"></td>
+		</tr>
+		<tr>
+			<td class="lefttd">邮箱:</td>
+			<td><input type="text"></td>
+		</tr>
+		<tr>
+			<td class="lefttd">验证码:</td>
+			<td><input id="yzminput" type="text"> <img id="yzmimg" src="img/regist/yzm.jpg"></td>
+		</tr>
+		<tr>
+			<td id="btntd" colspan="2"><input type="submit" value="注册用户"></td>
+		</tr>
+	</table>
+	
+	</form>
+</body>
+</html>
